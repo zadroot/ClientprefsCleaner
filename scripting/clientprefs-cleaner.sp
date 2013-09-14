@@ -15,7 +15,7 @@
 #define PLUGIN_VERSION "1.0"
 
 // ====[ PLUGIN ]================================================================
-new	Handle:db = INVALID_HANDLE, Handle:purge_days = INVALID_HANDLE;
+new Handle:db = INVALID_HANDLE, Handle:purge_days = INVALID_HANDLE;
 
 public Plugin:myinfo =
 {
@@ -77,7 +77,7 @@ public OnMapStart()
  * ------------------------------------------------------------------------------ */
 public OnClientCookiesCached(client)
 {
-	new	String:client_steamid[MAX_NAME_LENGTH];
+	new String:client_steamid[MAX_NAME_LENGTH];
 
 	// Make sure client is authorized, otherwise invalid steamid may be passed in query
 	if (GetClientAuthString(client, client_steamid, sizeof(client_steamid)))
